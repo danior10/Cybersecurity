@@ -13,17 +13,17 @@ Skan nmap trwa wyjątkowo długo
 
 
 Skan nmap znalazł otwarte porty: 21,22,23,25,53,80,443,3128,3306,9090
-#PORT 21
+# PORT 21
 1. Pierwszy otwarty port 21 ftp możliwe logowanie anonimowe, ftp 10.0.0.180 połączenie udane z uzyciem anonymous, znaleziony plik part_4_bU po uzyciu cat
 Good job!  
 
 
-#PORT 22,23 
+# PORT 22,23 
 port SSH - chciałem wykonać brute force z użyciem hydry i wordlisty rockyou w /usr/share/wordlist, ale była spakowana, przy próbie odpakowania dostałem komunikat o braku uprawnień
 - telnet i ssh nie udało mi się zalogować z podstawowymi danymi, jako login próbowałem root i admin, jako haseł password, root, toor, admin
 
 
-#PORT 80 
+# PORT 80 
 dirbuster znalazł /cgi-bin/ w środku którego szukałem plików o rozszerzeniu php,sh,py,cgi,nic nie znalazłem,  oraz /icons w którym też nic ciekawego nie było
 
 nmap na porcie 80 dał znać o potencjalnie niebezpiecznej metodzie TRACE
@@ -55,7 +55,7 @@ Accept: */*
 
 -searchsploit na apache 2.4 znalazł z interesujących rzeczy tylko privilege escalation
 
-#PORT 25
+# PORT 25
 uruchomiłem scanner w metasplot smtp_enum, który znalazł poniższych użytkowników
 
 ```
@@ -63,7 +63,7 @@ Users found: , adm, admin, avahi, bin, chrony, cockpit-ws, colord, daemon, dbus,
 
 ```
 
-#PORT 53 DNS
+# PORT 53 DNS
 
 ```
 └─$ dig 10.0.0.180                                                                                                                                                                                                                       1 ⚙
@@ -91,16 +91,16 @@ Users found: , adm, admin, avahi, bin, chrony, cockpit-ws, colord, daemon, dbus,
 nslookup nie dał mi pomocnych informacji
 
 
-#PORT 3306 SQL
+# PORT 3306 SQL
 użyłem sqlmap 10.0.0.180, nie zapisałem wyniku ale nie było tam nic interesującego, nie miałem dość czasu na szukanie exploitów na MySQL 8.0.21 
 
-#PORT 3128 
+# PORT 3128 
 - port 3128 strona z błędem
 
-#PORT 9090
+# PORT 9090
 próbowałem sprawdzić na Firefoxie dany port, nie znalazłem nic
 
-#FLAGI
+# FLAGI
 Udało mi się odnaleźć jedynie dwie flagi, 4 oraz 6:
 ```
 <! --Good job! part_6_h== -->
