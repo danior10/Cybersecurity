@@ -107,4 +107,5 @@ Udało mi się odnaleźć jedynie dwie flagi, 4 oraz 6:
 part_4_bU - Good job!  
 ```
 flaga 6 - port 80 komentarz na stronie
+
 flaga 4 - plik udostępniony w ftp
