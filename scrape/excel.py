@@ -35,8 +35,8 @@ def zrob_tabelke():
                     if t2.lstrip().startswith('CVE'):
                         if float(t2.lstrip().split()[1]) > 5.0:
                             print(t2.lstrip())
-                            ws.append(t2.lstrip().split())
-                            #zmienna = zmienna + t2.lstrip() + '\n'
+                            #ws.append(t2.lstrip().split())
+                            zmienna = zmienna + t2.lstrip() + '\n'
                             #cve.write(t2.lstrip()+'\n')
                 #print(t1.lstrip())
                 #cve.write('###############'+ '\n')         
@@ -51,9 +51,9 @@ def zrob_tabelke():
             zmienna ='# '+ host_name + '\n' + zmienna
             zmienna = zmienna.splitlines()
             print(zmienna)
-            ws.insert_rows(1)
-            ws['A1'].value = host_name
-            #ws.append(zmienna)
+            #ws.insert_rows(1)
+            #ws['A1'].value = host_name
+            ws.append(zmienna)
             #cve.write(zmienna)    
     wb.save('cve.xlsx')
     """
